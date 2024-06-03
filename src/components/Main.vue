@@ -80,8 +80,6 @@
             {{ i.quantity }}
             <a class="btn btn-primary" @click="decrement(i.key)">-</a>
           </td>
-          <td>
-          </td>
         </tr>
       </tbody>
     </table>

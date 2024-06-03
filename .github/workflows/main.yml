@@ -37,7 +37,7 @@ jobs:
       - name: Set up Yarn
         uses: borales/actions-yarn@4
         with:
-          install --frozen-lockfile
+          cmd: install --frozen-lockfile
       - name: Build
         run: npm run build
       - name: Setup Pages

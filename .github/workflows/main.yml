@@ -36,7 +36,7 @@ deploy:
         node-version: 20
         cache: 'npm'
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      run: npm ci
     - name: Build
       run: npm run build
     - name: Setup Pages

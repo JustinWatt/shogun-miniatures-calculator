@@ -59,25 +59,28 @@
       <thead>
         <tr>
           <th>Frontage x Depth</th>
+          <th>Edge Type</th>
           <th>Base Size</th>
           <th>Width</th>
           <th>Depth</th>
           <th>Price ea.</th>
           <th>Quantity</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="i in R.values(lineItems)" :key="i.key">
           <td>{{ computeDimensions(i.item) }}</td>
+          <td>{{ i.item.edgeType }}</td>
           <td>{{ i.item.baseSize }}mm</td>
           <td>{{ i.item.width }}</td>
           <td>{{ i.item.depth }}</td>
           <td>{{ formatPrice(i.item.price, true) }}</td>
-          <td>{{ i.quantity }}</td>
           <td>
             <a class="mr-2 btn btn-primary" @click="increment(i.key)">+</a>
+            {{ i.quantity }}
             <a class="btn btn-primary" @click="decrement(i.key)">-</a>
+          </td>
+          <td>
           </td>
         </tr>
       </tbody>

@@ -35,7 +35,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - name: Set up Yarn
-        uses: borales/actions-yarn@4
+        uses: borales/actions-yarn@5
         with:
           cmd: install --frozen-lockfile
       - name: Build

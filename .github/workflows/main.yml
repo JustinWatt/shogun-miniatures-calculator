@@ -34,9 +34,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - name: Install Yarn
-        run: npm install yarn
-      - name: Instal ldeps
+      - name: Install deps
         run: yarn install --frozen-lockfile
       - name: Build
         run: npm run build

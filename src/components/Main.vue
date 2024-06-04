@@ -89,7 +89,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import * as R from 'remeda'
-import priceData from '../price-map.json'
+import data from '../price-map.json'
+
+const priceData: Record<string, number> = data
 
 type Item = {
   width: number
@@ -139,13 +141,13 @@ const addItem = () => {
   }
 }
 
-const increment = (key) => {
+const increment = (key: string) => {
   if (lineItems.value[key]) {
     lineItems.value[key].quantity++
   }
 }
 
-const decrement = (key) => {
+const decrement = (key: string) => {
   if (lineItems.value[key]) {
     if (lineItems.value[key].quantity === 1) {
       lineItems.value = R.omit(lineItems.value, [key])
